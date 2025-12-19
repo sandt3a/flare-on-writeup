@@ -300,6 +300,16 @@ if __name__ == '__main__':
 
 #### challenge 6
 
+the Java just pass the input string to libvalidate.so
+
+In function `Java_com_flareon_flare_ValidateActivity_validate`,  every two bytes of input string was used to form a number and calculate the prime-factorization
+then diff with 0xd94 of enc data, and the length have to be 23.
+
+we can extract the data and caculate the flag using some tool like ExportPlus of IDA.
+I tried to write a pyGhidra script but failed. I don't know why my gridra seems doesn't support python.
+
+the exp is in ![here](./chal6_solver.py)
+
 > 
 
 #### challenge 7
