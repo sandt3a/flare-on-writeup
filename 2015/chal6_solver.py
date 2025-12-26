@@ -9,9 +9,10 @@ m = 6952 // 2
 res = ''
 for i in range(n):
     num = 1
-    for j in range(1738):
+    for j in range(m):
         e = data[i*m+j]
         num *= primes[j] ** e
+    print(num)
     res += chr(num % 256)
     res += chr(num // 256)
 
